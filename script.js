@@ -11,7 +11,10 @@ $(document).ready(function(){
       });
    });
 
-   
+   let w = $('.example').width();
+   let h = $('.example').height();
+
+   alert(h);
 
 });
 
