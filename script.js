@@ -1,20 +1,31 @@
+let userName = prompt(`Hi what's your name?`);
 
-// function doNothing(a, b) {
-//    a = 10;
-//    b = 10;
-   
-//    return a * b;
+while (userName == '' || userName == null ) {
+	alert('You need to enter your name before start the game');
+	userName = prompt(`Hi what's your name?`);
+} 
 
-// }
+alert( userName + ', you need to guese a number. After each try you will get a message: "perfect match", "hot", "cold".');
 
-// alert( doNothing() );
+let guessNumber = Math.ceil( Math.random() * 100);;
+let guess = prompt('Guess number');
+let numberOfGuesses = 0;
 
-let sayHi = function() {
-   alert('Hello world!');
+while ( guess != guessNumber ) {
+
+	if ( guess < guessNumber ) {
+		guess = prompt('You was wrong, to cold');
+		numberOfGuesses += 1;	
+	} 
+	
+	if (guess > guessNumber ) {
+		guess = prompt('You was wrong, to hot');
+		numberOfGuesses += 1;
+	}
 }
 
-let func = sayHi;
-
-func();
-
-// sayHi();
+if ( numberOfGuesses <= 1 ) {
+	alert( 'Perfect match, it was ' + guessNumber + '. It took you ' + numberOfGuesses + ' attempt.' );
+} else {
+	alert( 'Perfect match, it was ' + guessNumber + '. It took you ' + numberOfGuesses + ' attempts.' );
+}
