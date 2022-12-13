@@ -106,18 +106,29 @@
 
 // alert( id.toString() );
 
-let obj1 = {
-   name: 'Gregory',
-   surname: 'Rasputin',
-   age: 45,
-};
+// let obj1 = {
+//    name: 'Gregory',
+//    surname: 'Rasputin',
+//    age: 45,
+// };
 
-let obj2 = {
-   name: 'Gregory',
-   surname: 'Oxford',
-   age: 25,
-};
+// let obj2 = {
+//    name: 'Gregory',
+//    surname: 'Oxford',
+//    age: 25,
+// };
 
-let sum = obj1 + obj2;
+// let sum = obj1 + obj2;
 
-alert( sum );
+// alert( sum );
+
+const bodyElement = document.body;
+
+const firstChildNode = bodyElement.firstChild;
+const lastChildNode = bodyElement.lastChild;
+
+console.log(firstChildNode);
+console.log(lastChildNode);
+
+const row = document.getElementsByClassName('main__row');
+
